@@ -15,6 +15,10 @@ async function myFunc() {
     document.querySelector('#btnd').innerHTML += `<img src = "${data.url}">`;
   }
 
+
+
+
+
   let buttona = document.querySelectorAll('button.buttons');
   console.log(buttona)
   buttona[0].addEventListener('click', () => {
@@ -26,3 +30,23 @@ async function myFunc() {
     const json = await resp.json();
     document.querySelector('#futurama').innerHTML = json[0].synopsis;
         }
+
+
+
+        
+    let buttonan = document.querySelectorAll('button.buttons');
+    console.log(buttonan)
+    buttonan[1].addEventListener('click', () => {
+      myPhotos();
+      });
+      
+ async function myPhotos() {
+    let respo = await fetch('https://dog.ceo/api/breeds/image/random');
+    let jsonn = await respo.json();
+    useApiDataa(jsonn);
+  }
+  function useApiDataa(jsonn) {
+    document.querySelector('#btn').innerHTML += `<img src = "${jsonn.message}">`;
+  }
+   
+     

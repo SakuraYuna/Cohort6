@@ -9,8 +9,8 @@
    <body>
       <h1> Welcome to the Galaxy of Deliciousness! </h1>
       <br>
-
-      <divid="googlebutton">  </div>
+      <br>
+      <br>
       <p id="new"> Here you'll find a snippet of information under each delicious pastry! Speaking of which...Oh my! I've found <b>ten thousand </b> new flavours of <i>cupcakes</i> on planet Venus!  
      </p>
      
@@ -29,11 +29,11 @@
      <div class="photos"><img ID="u" src = "cupcakes in space.jpg">
       <pre ID="two" class="para"> And this one! The craftmanship is surreal! 
         Let's see what happens when we bite it...</pre>
-      <button class="buttons" id="btn">Bite me! ;D</button>
-      <p id="futurama"></p>
+      <button class="buttons" id="futurama">Bite me! ;D</button>
+      <p></p>
       <div class="buttona" id="buttonab"></div> </div>
 
-     <div class="photos"><img ID="p"src = "cupcakes.jpg" class="photos">
+     <div class="photos"><img ID="plo"src = "cupcakes.jpg" class="photos">
       <pre ID="three" class="para"> Uranus loves cupcakes ;D</pre>
       <button class="buttons" id="btn">Take a little nibble;D</button>
       <div class="buttona" id="buttonan"></div></div>
@@ -54,12 +54,19 @@
         <pre ID="six" class="para"> The sun is ALMOST as hot as the yummy baked good >:D</pre>
         <button class="buttons" id="btna">Let's get toasty! ;D</button>
         <div class="buttona"id="buttocks"></div></div>
+
+        <div class="photos"><img ID="pro" src = "White raiment.jpg" class="photos">
+          <pre ID="seven" class="para"> What a beautiful scene</pre>
+          <button class="buttons" id="actions">Let's see</button>
+          <div class="buttona"id="pure"></div></div>
      </div>
     
      <script src="Java script.js" defer></script>
     
     <br>
     <br>
+
+    <img src="R.jpg" id="imgo"> Wow, a land full of pastries...<img>
    
   </body>
 
@@ -76,19 +83,27 @@
         display:flex; 
         flex-direction:row;
         flex-flow: wrap;
-        justify-content:center;
+        justify-content:space-around;
+        align-items: baseline;
         flex-grow:1;
         gap: 60px;      
 
     }
 
    h1{ 
-   color: blue;
+   color: rgb(78, 78, 253);
    font-size: 30px;
-   font-family:'Courier New', Courier, monospace;
+   font-family:cursive;
+   background-color:rgba(43, 6, 58, 0.87);
    position: absolute;
    left: 350px;
    }
+
+   #pro{
+    height:15%;
+    width:15%;
+   }
+
 
    .photos{
     height:100;
@@ -100,10 +115,10 @@
    
    #new{
     position:absolute;
+    margin-top: 120px;
     font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-style: bold;
-    top: 150px;
    }
 
    body{
@@ -112,11 +127,17 @@
    background-repeat: no-repeat;
    }
 
+   #imgo{
+   height: 100%;
+   width: 80%;
+   margin-top: 80%;
+   }
+
    pre{
     color: white;
    }
 
-   p{ color: white;
+   #pr{ color: white;
       position: absolute; 
     font-size: 20px;
    }
