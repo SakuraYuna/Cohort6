@@ -15,29 +15,14 @@ async function myFunc() {
     document.querySelector('#btnd').innerHTML += `<img src = "${data.url}">`;
   }
 
-
- 
- 
-  let buttona = document.querySelectorAll('.buttons');
- 
-  const options = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': '42e8536214msh06baf16f79eb0f2p1425fcjsndbe984ccc6ba',
-		'X-RapidAPI-Host': 'moon-phase.p.rapidapi.com'
-	}
-};
-
-  function myPhoto() {
-    fetch('https://moon-phase.p.rapidapi.com/moon_phase/', options)
-	.then((res) => {
-        return res.json();
-    })
-    .then((parsedRes) => {
-        for(let i = 0; i < buttona.length; i++){
-            buttona[i].innerHTML = parsedRes.value;
-         }
-        })
-        }
-
+  let buttona = document.querySelectorAll('button.buttons');
+  console.log(buttona)
+  buttona[0].addEventListener('click', () => {
     myPhoto();
+     });
+
+ async function myPhoto() {
+    const resp = await fetch('https://api.sampleapis.com/futurama/info');
+    const json = await resp.json();
+    document.querySelector('#futurama').innerHTML = json[0].synopsis;
+        }
